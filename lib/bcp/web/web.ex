@@ -19,9 +19,11 @@ defmodule Bcp.Web do
   def controller do
     quote do
       use Phoenix.Controller, namespace: Bcp.Web
+      import Ecto.Query
       import Plug.Conn
       import Bcp.Web.Router.Helpers
       import Bcp.Web.Gettext
+      alias Bcp.Repo
     end
   end
 

@@ -9,6 +9,16 @@ use Mix.Config
 config :bcp,
   ecto_repos: [Bcp.Repo]
 
+config :bcp,
+  esv_api_key: System.get_env("ESV_API_KEY"),
+  aws_access_key_id: System.get_env("AWS_ACCESS_KEY"),
+  aws_secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY")
+
+config :ex_aws,
+  access_key_id: System.get_env("AWS_ACCESS_KEY"),
+  secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
+  mp3_bucket: System.get_env("MP3_BUCKET")
+
 # Configures the endpoint
 config :bcp, Bcp.Web.Endpoint,
   url: [host: "localhost"],

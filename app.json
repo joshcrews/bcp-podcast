@@ -2,7 +2,8 @@
   "addons": ["heroku-postgresql"],
   "buildpacks": [
     { 
-      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git",
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
     }
   ]
 }

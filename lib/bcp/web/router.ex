@@ -1,12 +1,8 @@
 defmodule Bcp.Web.Router do
   use Bcp.Web, :router
 
-  pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
+  pipeline :xml do
+    plug :accepts, ["xml"]
   end
 
   pipeline :api do
@@ -14,9 +10,9 @@ defmodule Bcp.Web.Router do
   end
 
   scope "/", Bcp.Web do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :xml # Use the default xml stack
 
-    get "/", PageController, :index
+    get "/podcast.xml", PodcastController, :index
   end
 
   # Other scopes may use custom stacks.

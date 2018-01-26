@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <atom:link href="https://bcp-podcast.herokuapp.com/podcast.xml" rel="self" type="application/rss+xml" />
+    <title>Daily Office Lectionary</title>
+    <description>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</description>
+    <link>https://bcp-podcast.herokuapp.com/podcast.xml</link>
+    <language>en</language>
+    <lastBuildDate><%= @last_build_date %></lastBuildDate>
+    <pubDate>Sat, 27 Jan 2018 19:24:54 GMT</pubDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <webMaster>josh@joshcrews.com (Josh Crews)</webMaster>
+
+  <%= for episode <- @episodes do %>
+    <item>
+      <title><%= episode_title(episode) %></title>
+      <link><%= episode_link(episode) %></link>
+      <guid><%= episode_guid(episode) %></guid>
+      <description><%= episode_description(episode) %></description>
+      <enclosure url="<%= episode_mp3_url(episode) %>" type="audio/mpeg"/>
+      <category>Christianity</category>
+      <pubDate><%= episode_pub_date(episode) %></pubDate>
+    </item>
+  <% end %>
+  
+
+</channel>
+</rss>

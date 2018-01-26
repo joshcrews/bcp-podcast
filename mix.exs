@@ -35,6 +35,16 @@ defmodule Bcp.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
+     {:ibrowse, "~> 4.2.0"},
+     {:httpotion, "~> 2.1.0"},
+     {:floki, "~> 0.17.0"},
+     {:poison, "~> 3.1"},
+     {:ex_aws, "~> 2.0"},
+     {:ex_aws_s3, "~> 2.0"},
+     # {:ex_aws, path: "deps/ex_aws"},
+     {:hackney, "1.6.1", override: true},
+     {:sweet_xml, "~> 0.6"},
+     {:timex, "~> 3.1"},
      {:cowboy, "~> 1.0"}]
   end
 
