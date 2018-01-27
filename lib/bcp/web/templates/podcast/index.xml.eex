@@ -10,6 +10,7 @@
     <pubDate>Sat, 27 Jan 2018 19:24:54 GMT</pubDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <webMaster>josh@joshcrews.com (Josh Crews)</webMaster>
+    <itunes:category>Christianity</itunes:category>
     <image>
       <url>https://bcp-podcast.herokuapp.com/images/bible.png</url>
     </image>
@@ -17,6 +18,7 @@
   <%= for episode <- @episodes do %>
     <item>
       <title><%= episode_title(episode) %></title>
+      <author>ESV</author>
       <link><%= episode_link(episode) %></link>
       <guid><%= episode_guid(episode) %></guid>
       <description><%= episode_description(episode) %></description>
