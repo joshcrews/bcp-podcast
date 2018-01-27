@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd">
 <channel>
-    <atom:link href="https://bcp-podcast.herokuapp.com/podcast.xml" rel="self" type="application/rss+xml" />
     <title>Daily Office Lectionary</title>
     <description>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</description>
     <link>https://bcp-podcast.herokuapp.com/podcast.xml</link>
