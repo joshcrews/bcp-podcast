@@ -10,7 +10,11 @@
     <pubDate>Sat, 27 Jan 2018 19:24:54 GMT</pubDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <webMaster>josh@joshcrews.com (Josh Crews)</webMaster>
-    <itunes:category>Christianity</itunes:category>
+    <itunes:owner>
+      <itunes:name>Josh Crews</itunes:name>
+      <itunes:email>josh@joshcrews.com</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Christianity">
     <image>
       <url>https://bcp-podcast.herokuapp.com/images/bible.png</url>
     </image>
