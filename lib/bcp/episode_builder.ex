@@ -18,7 +18,7 @@ defmodule Bcp.EpisodeBuilder do
     |> get_audio_mp3_files()
     |> stitch_together_final_mp3_file()
     |> upload_mp3_file()
-    |> calculate_duration()
+    |> calculate_mp3_bytes()
     |> commit_episode_to_database()
     :finished
   end
@@ -138,12 +138,26 @@ defmodule Bcp.EpisodeBuilder do
     Map.put(params, :s3_url, s3_url)
   end
 
-  def calculate_duration(params) do
-    params
+  def calculate_mp3_bytes(params = %{output_path: output_path}) do
+
+    %File.Stat{size: file_size_bytes} = File.stat!(output_path)
+
+    Map.put(params, :file_size_bytes, file_size_bytes)
   end
 
-  def commit_episode_to_database(params = %{s3_url: s3_url, date: date, episode_full_name: episode_full_name, episode_full_text: episode_full_text}) do
-    %Bcp.Episode{mp3_url: s3_url, date: date, passages: episode_full_name, passage_text: episode_full_text}
+  def commit_episode_to_database(params = %{
+                                            s3_url: s3_url, 
+                                            date: date, 
+                                            file_size_bytes: file_size_bytes,
+                                            episode_full_name: episode_full_name, 
+                                            episode_full_text: episode_full_text}) do
+    %Bcp.Episode{
+                  mp3_url: s3_url, 
+                  date: date, 
+                  passages: episode_full_name, 
+                  passage_text: episode_full_text,
+                  file_size_bytes: file_size_bytes,
+                }
     |> Repo.insert!
 
     params

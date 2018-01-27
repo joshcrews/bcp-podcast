@@ -10,6 +10,7 @@ defmodule Bcp.Episode do
     field :mp3_url, :string
     field :passage_text, :string
     field :passages, :string
+    field :file_size_bytes, :integer
 
     timestamps()
   end
@@ -17,7 +18,7 @@ defmodule Bcp.Episode do
   @doc false
   def changeset(%Episode{} = episode, attrs) do
     episode
-    |> cast(attrs, [:date, :duration_seconds, :mp3_url, :passages, :passage_text])
-    |> validate_required([:date, :duration_seconds, :mp3_url, :passages, :passage_text])
+    |> cast(attrs, [:date, :duration_seconds, :mp3_url, :passages, :passage_text, :file_size_bytes])
+    |> validate_required([:date, :duration_seconds, :mp3_url, :passages, :passage_text, :file_size_bytes])
   end
 end

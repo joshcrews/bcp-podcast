@@ -15,4 +15,5 @@ erl_crash.dump
 # variables.
 /config/*.secret.exs
 /.env
-/mp3/output/*.mp3
+/mp3s/output/*.mp3
+/mp3s/*.mp3

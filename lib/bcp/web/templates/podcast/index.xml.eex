@@ -17,7 +17,7 @@
       <link><%= episode_link(episode) %></link>
       <guid><%= episode_guid(episode) %></guid>
       <description><%= episode_description(episode) %></description>
-      <enclosure url="<%= episode_mp3_url(episode) %>" type="audio/mpeg"/>
+      <enclosure url="<%= episode_mp3_url(episode) %>" length="<%= episode.file_size_bytes %>" type="audio/mpeg"/>
       <category>Christianity</category>
       <pubDate><%= episode_pub_date(episode) %></pubDate>
     </item>
