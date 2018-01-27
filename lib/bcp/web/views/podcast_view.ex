@@ -7,11 +7,10 @@ defmodule Bcp.Web.PodcastView do
 
   def episode_link(episode) do
     episode.mp3_url
-    ""
   end
 
   def episode_guid(episode) do
-    episode.date
+    episode.mp3_url
   end
 
   def episode_description(episode) do

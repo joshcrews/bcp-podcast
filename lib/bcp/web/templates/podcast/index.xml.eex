@@ -17,7 +17,6 @@
   <%= for episode <- @episodes do %>
     <item>
       <title><%= episode_title(episode) %></title>
-      <author>ESV</author>
       <link><%= episode_link(episode) %></link>
       <guid><%= episode_guid(episode) %></guid>
       <description><%= episode_description(episode) %></description>
