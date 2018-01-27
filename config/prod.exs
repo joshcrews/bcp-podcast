@@ -15,6 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :bcp, Bcp.Web.Endpoint,
   load_from_system_env: true,
+  debug_errors: true,
   secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE"),
   url: [host: "bcp-podcast.herokuapp.com"]
 

@@ -2,7 +2,7 @@ defmodule Bcp.Web.PodcastView do
   use Bcp.Web, :view
 
   def episode_title(episode) do
-    "January 25, 2018"
+    "#{episode.date} - #{episode.passages}"
   end
 
   def episode_link(episode) do
