@@ -12,8 +12,11 @@ defmodule Bcp.Application do
       supervisor(Bcp.Repo, []),
       # Start the endpoint when the application starts
       supervisor(Bcp.Web.Endpoint, []),
+
       # Start your own worker by calling: Bcp.Worker.start_link(arg1, arg2, arg3)
       # worker(Bcp.Worker, [arg1, arg2, arg3]),
+      worker(Bcp.EpisodeBuilderServer, []),
+      
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

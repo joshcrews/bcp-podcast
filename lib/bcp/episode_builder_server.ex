@@ -1,5 +1,8 @@
 defmodule Bcp.EpisodeBuilderServer do
 
+  import Ecto.Query
+  alias Bcp.Repo
+
   @moduledoc """
   The point of the genserver is to make sequential (not parallel) the requests
   to generate the next episode, and never have that happen in parallel
@@ -7,9 +10,10 @@ defmodule Bcp.EpisodeBuilderServer do
 
   use GenServer
 
-  alias Bcp.Repo
+  
 
   def start_link do
+    IO.inspect {:started, :episode_builder_server}
     GenServer.start_link(__MODULE__, nil, name: :episode_builder_server)
   end
 
@@ -25,7 +29,8 @@ defmodule Bcp.EpisodeBuilderServer do
   ### Server Callbacks
 
   
-  def handle_info(:build_daily_episode, _state) do
+  def handle_cast(:build_daily_episode, _state) do
+    IO.inspect({:work, :build_daily_episode})
     work()
     {:noreply, []}
   end
@@ -33,9 +38,13 @@ defmodule Bcp.EpisodeBuilderServer do
 
   def work do
     date = Date.utc_today()
+    query = (
+              from e in Bcp.Episode,
+              where: e.date == ^date
+            )
 
-    case Repo.get_by(Bcp.Episode, %{date: date}) do
-      nil ->
+    case Repo.all(query) do
+      [] ->
         Bcp.EpisodeBuilder.build(date)
       _ ->
         :noop
