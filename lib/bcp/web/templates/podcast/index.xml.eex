@@ -1,9 +1,8 @@
-   <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:itunesu="http://www.itunesu.com/feed" version="2.0">
   <channel>
     <link>https://bcp-podcast.herokuapp.com/podcast.xml</link>
     <language>en-us</language>
-    <copyright>&#xA9;2017</copyright>
     <webMaster>josh@joshcrews.com (Josh Crews)</webMaster>
     <managingEditor>josh@joshcrews.com (Josh Crews)</managingEditor>
     <image>
@@ -16,18 +15,20 @@
       <itunes:name>Josh Crews</itunes:name>
       <itunes:email>josh@joshcrews.com</itunes:email>
     </itunes:owner>
-    <itunes:category text="News & Politics">
+    <itunes:category text="News &amp; Politics">
       <itunes:category text="Christianity" />
     </itunes:category>
     <itunes:explicit>no</itunes:explicit>
     <itunes:image href="https://bcp-podcast.herokuapp.com/images/bible.png" />
+    <itunes:author>Josh Crews</itunes:author>
+    <itunes:summary>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</itunes:summary>
+    <itunes:subtitle>Daily Office readings read by robot with Australian accent</itunes:subtitle>
     <atom:link href="https://bcp-podcast.herokuapp.com/podcast.xml" rel="self" type="application/rss+xml" />
     <pubDate>Sat, 27 Jan 2018 19:24:54 GMT</pubDate>
     <title>Daily Office Lectionary</title>
-    <itunes:author>Josh Crews</itunes:author>
+    
     <description>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</description>
-    <itunes:summary>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</itunes:summary>
-    <itunes:subtitle>Daily Office readings read by robot with Australian accent</itunes:subtitle>
+    
     <lastBuildDate><%= @last_build_date %></lastBuildDate>
     <%= for episode <- @episodes do %>
       <item>
