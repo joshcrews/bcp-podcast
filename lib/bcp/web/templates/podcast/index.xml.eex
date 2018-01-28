@@ -27,7 +27,7 @@
     <itunes:author>Josh Crews</itunes:author>
     <description>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</description>
     <itunes:summary>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</itunes:summary>
-    <itunes:subtitle>Robot voice with Australian accent reads Bible</itunes:subtitle>
+    <itunes:subtitle>Daily Office readings read by robot with Australian accent</itunes:subtitle>
     <lastBuildDate><%= @last_build_date %></lastBuildDate>
     <%= for episode <- @episodes do %>
       <item>
