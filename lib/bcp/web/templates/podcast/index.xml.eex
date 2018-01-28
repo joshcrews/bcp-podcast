@@ -6,7 +6,7 @@
     <webMaster>josh@joshcrews.com (Josh Crews)</webMaster>
     <managingEditor>josh@joshcrews.com (Josh Crews)</managingEditor>
     <image>
-      <url>https://bcp-podcast.herokuapp.com/images/bible.png</url>
+      <url>https://bcp-podcast.herokuapp.com/images/photo.jpg</url>
       <title>Daily Office Lectionary</title>
     </image>
     <itunes:owner>
@@ -17,7 +17,7 @@
       <itunes:category text="Christianity" />
     </itunes:category>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="https://bcp-podcast.herokuapp.com/images/bible.png" />
+    <itunes:image href="https://bcp-podcast.herokuapp.com/images/photo.jpg" />
     <itunes:author>Josh Crews</itunes:author>
     <itunes:summary>Daily Office Lectionary readings. No deuterocanonical books (for now). Read by Australian-accented computer voice. Format: morning psalms, OT reading, Gospel reading, NT reading, evening psalms</itunes:summary>
     <itunes:subtitle>Daily Office readings read by robot with Australian accent</itunes:subtitle>
