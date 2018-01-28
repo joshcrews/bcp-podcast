@@ -15,7 +15,7 @@ defmodule Bcp.Web.PodcastView do
 
   def episode_description(episode) do
     ~s"""
-#{episode.passage_text}
+#{episode.passages}
 
 
 Scripture taken from The Holy Bible, English Standard Version.
