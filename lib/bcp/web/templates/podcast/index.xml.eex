@@ -8,8 +8,6 @@
     <image>
       <url>https://bcp-podcast.herokuapp.com/images/bible.png</url>
       <title>Daily Office Lectionary</title>
-      <link>
-      http://www.YourSite.com</link>
     </image>
     <itunes:owner>
       <itunes:name>Josh Crews</itunes:name>
