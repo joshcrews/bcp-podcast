@@ -6,7 +6,23 @@
 
 [https://bcp-podcast.herokuapp.com/podcast.xml](https://bcp-podcast.herokuapp.com/podcast.xml)
 
-## What it does
+## About the Daily Office
+
+The Daily Office Lectionary is prescibes daily Bible readings. Each day has
+
+* a morning psalm(s)
+* an evening psalm(s)
+* an Old Testament or deuterocanonical reading (but this podcast skips this deuterocanonical readings)
+* a reading from Matthew, Mark, Luke or John
+* a reading from the rest of New Testament
+
+It spends a lot of time of the Psalms. The Psalms repeat like every six weeks. The Old Testament is (kinda) covered over two years.
+
+The readings also change with the church season-- Advent, Christmas, Epiphany, Lent and holy days.
+
+The Daily Office readings are used in Morning Prayer and Evening Prayer services.
+
+## What the software does
 
 1. ESV Bible API is called for the Daily Office lectionary reading plan for today's date
 2. The readings are sorted into
